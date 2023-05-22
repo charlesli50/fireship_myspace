@@ -1,3 +1,8 @@
+// THIS IS AN ABOUT PAGE
+// It is static(about page will never change)
+// metadata is being populated on the server side for SEO optimization
+// Simple About thingy
+
 export const dynamic = "force-static";
 
 import { Metadata } from "next";

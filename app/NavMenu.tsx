@@ -4,6 +4,7 @@ import Image from "next/image";
 
 export default function NavMenu() {
   return (
+    // styles are imported from the styles page
     <nav className={styles.nav}>
       <Link href={"/"}>
         <Image

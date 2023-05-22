@@ -1,3 +1,6 @@
+// exports a few posts
+// import getServerSession, await getServerSession for whether or not user is signed in
+
 const posts = [
   {
     title: "Introduction to Programming",
@@ -32,7 +35,10 @@ const posts = [
 ];
 
 import { NextResponse } from "next/server";
+import { getServerSession } from "next-auth";
 
 export async function GET() {
+  const session = await getServerSession();
+
   return NextResponse.json(posts);
 }
