@@ -1,6 +1,8 @@
 import Link from "next/link";
 import styles from "./NavMenu.module.css";
 import Image from "next/image";
+import { SignInButton, SignOutButton } from "../components/buttons";
+import AuthCheck from "@/components/AuthCheck";
 
 export default function NavMenu() {
   return (
@@ -29,6 +31,14 @@ export default function NavMenu() {
           <Link href={"/users"} className={styles.link}>
             Users
           </Link>
+        </li>
+        <li>
+          <SignInButton />
+        </li>
+        <li>
+          <AuthCheck>
+            <SignOutButton />
+          </AuthCheck>
         </li>
       </ul>
     </nav>
